@@ -1,6 +1,5 @@
-import emailjs from '@emailjs/browser';
-import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Palette, Smartphone, Globe, ChevronDown, MapPin, Calendar, User, Briefcase, GraduationCap } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Palette, Globe, ChevronDown, MapPin, Calendar, User, Briefcase } from 'lucide-react';
 import { Link } from '@react-email/link';
 
 const Home = () => {
@@ -40,10 +39,6 @@ const Home = () => {
     setIsMenuOpen(false);
   };
 
-  const sendEmail = async (e : any)  =>{
-    e.preventDefult()
-    
-  }
   const skills = [
     { category: 'Frontend', items: ['React', 'Next.js', 'Tailwind', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'] },
     { category: 'Backend', items: ['Node.js','Express.js', 'Python',  'REST APIs'] },
@@ -64,32 +59,13 @@ const Home = () => {
       title: 'ReviewNest',
       description : 'A commuity driven book-review platform using Next.js, TypeScript, and Prisma ORM with PostgreSQL, designed to provide users with an intuitive interface to explore and rate books.',
       tech: ['Next.js', 'Prisma ORM',  'PostgreSQL', 'OAuth', 'Tailwind'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
+      image: '/reviewnest_ss.png',
       github: 'https://github.com/Rayyan-Alam71/ReviewNest',
       live: 'https://review-nest-app.vercel.app/'
     }
   ];
 
-  const experiences = [
-    {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovation Corp',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting system solutions.'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Solutions Ltd',
-      period: '2020 - 2022',
-      description: 'Developed responsive web applications and collaborated with UX/UI designers to create intuitive user interfaces using modern JavaScript frameworks.'
-    },
-    {
-      title: 'Junior Web Developer',
-      company: 'StartUp Hub',
-      period: '2019 - 2020',
-      description: 'Built and maintained company websites and web applications. Gained experience in full-stack development and agile methodologies.'
-    }
-  ];
+ 
 
   return (
     <div className="bg-gray-950 text-white min-h-screen w-screen">
