@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Palette, Globe, ChevronDown, MapPin, Calendar, User, Briefcase } from 'lucide-react';
-import { Link } from '@react-email/link';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +66,6 @@ const Home = () => {
   ];
 
  
-
   return (
     <div className="bg-gray-950 text-white min-h-screen w-screen">
       {/* Navigation */}
@@ -104,9 +103,9 @@ const Home = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-300 hover:text-white p-2"
+                className="text-gray-800 hover:text-white"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
             </div>
           </div>
@@ -114,13 +113,13 @@ const Home = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-600">
+            <div className="px-2 pt-2 pb-3 space-y-2">
               {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white capitalize w-full text-left"
+                  className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-white capitalize w-6/7 mx-auto text-left"
                 >
                   {item}
                 </button>
@@ -133,7 +132,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
+          <div className="mb-8 mt-14">
             <div className="relative inline-block">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-1">
                 <div className="w-full h-full rounded-full bg-gray-950 flex items-center justify-center">
@@ -158,10 +157,13 @@ const Home = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button 
-              onClick={() => scrollToSection('projects')}
+            onClick={()=>{
+              window.open('https://drive.google.com/file/d/1animXldm7N3OlUlAPPGFnuJC2fHJdfhO/view?usp=drivesdk', '_blank');
+            }}
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              View My Work
+              My Resume
+              
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -171,6 +173,7 @@ const Home = () => {
             </button>
           </div>
           
+          
           <div className="flex justify-center space-x-6">
             <a href="https://github.com/Rayyan-Alam71/" className="text-gray-400 hover:text-white transition-colors">
               <Github size={24} />
@@ -178,8 +181,8 @@ const Home = () => {
             <a href="https://www.linkedin.com/in/rayyan-alam-40b6a3299/" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={24} />
             </a>
-            <a href="alamrayyan167@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-              <Mail size={24} />
+            <a href="https://x.com/rayyanAlam1234" className="text-gray-400 hover:text-white transition-colors">
+              <X size={24} />
             </a>
           </div>
         </div>
@@ -395,8 +398,8 @@ const Home = () => {
                   <a href="https://www.linkedin.com/in/rayyan-alam-40b6a3299/" target='_blank' className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
                     <Linkedin size={20} />
                   </a>
-                  <a href="alamrayyan167@gmail.com" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
-                    <Mail size={20} />
+                  <a href="https://x.com/rayyanAlam1234" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">
+                    <X size={20} />
                   </a>
                 </div>
               </div>
@@ -419,7 +422,6 @@ const Home = () => {
                 ></textarea>
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                   Send Message
-                  <Link href='qazirayyan55@gmail.com'>Send Mail</Link>
                 </button>
               </div>
             </div>
