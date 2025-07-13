@@ -131,7 +131,7 @@ const Home = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 mt-14">
+          <div className="mb-10 mt-24">
             <div className="relative inline-block">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 p-1">
                 <div className="w-full h-full rounded-full bg-gray-950 flex items-center justify-center">
@@ -159,7 +159,7 @@ const Home = () => {
             onClick={()=>{
               window.open('https://drive.google.com/file/d/1animXldm7N3OlUlAPPGFnuJC2fHJdfhO/view?usp=drivesdk', '_blank');
             }}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 "
             >
               My Resume
               
