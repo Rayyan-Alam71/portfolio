@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, Code, Palette, Globe, ChevronDown, MapPin, Calendar, User, Briefcase } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
